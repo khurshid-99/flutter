@@ -38,6 +38,7 @@
   border: $border;
   color: $color;
   font-weight: 600;
+  cursor: pointer;
 }
 @mixin p_font_size_lg() {
   font-size: clamp(18px, 2vw, 20px);
@@ -68,7 +69,9 @@ body {
 .view_4,
 .view_5,
 .view_6,
-.view_7 {
+.view_7,
+.view_10_inner,
+.view_11_inner {
   max-width: 1300px;
   margin: auto;
 }
@@ -80,8 +83,8 @@ body {
 main {
   width: 100%;
   height: 100%;
-  background: #000;
-  color: whitesmoke;
+  background: #ffffff;
+  color: #000;
   header {
     width: 100%;
     background: radial-gradient(ellipse at bottom, #1a68d3 5%, transparent 60%),
@@ -93,6 +96,8 @@ main {
       radial-gradient(ellipse at 5% 340%, transparent 80%, #bfc2f4 0);
 
     nav {
+      width: 100%;
+      position: relative;
       padding: 1.5rem;
       width: 100%;
       display: flex;
@@ -751,6 +756,7 @@ main {
   .view_9 {
     width: 100%;
     padding: 2rem;
+    position: relative;
     .view_9_inner {
       background-image: linear-gradient(
         90deg,
@@ -758,8 +764,8 @@ main {
         rgb(184, 240, 247)
       );
       border-radius: 40px;
-      overflow: hidden;
       @include flex(column);
+      position: relative;
       .view_9_texts {
         padding: 3rem;
         color: var(--text--color2);
@@ -789,10 +795,272 @@ main {
       }
       .view_9_image {
         width: 100%;
+        position: relative;
+        bottom: -4px;
         img {
           width: 100%;
+        }
+      }
+    }
+  }
+  .view_10 {
+    width: 100%;
+    padding: 6rem 2rem;
+    background-color: #f8f9fa;
+    color: var(--text--color2);
+    font-family: A1;
+    overflow: hidden;
+    .view_10_inner {
+      h1 {
+        font-size: clamp(46px, 6vw, 60px);
+        margin-bottom: 5rem;
+      }
+      .view_10_cards {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        @include flex();
+        flex-wrap: nowrap;
+        gap: 2rem;
+        .view_10_card_1,
+        .view_10_card_2,
+        .view_10_card_3 {
+          width: 100%;
+          height: clamp(435px, 50vw, 520px);
+          margin: auto;
+          margin-bottom: 1.7rem;
+          background-color: rgb(255, 255, 255);
+          transition: all 0.5s ease;
+          box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+          border-radius: 15px;
+          padding: 3rem;
+          flex-shrink: 0;
+          img {
+            width: 100%;
+          }
+          h1 {
+            font-size: clamp(24px, 3vw, 28px);
+            margin-top: 1rem;
+          }
+          button {
+            @include button_style(#000, none, 0);
+            background-color: transparent;
+            font-weight: 900;
+            font-size: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      .view_10_card_1:hover {
+        background-size: 100% 100%;
+        color: whitesmoke;
+        background: #0468d7;
+      }
+      .view_10_card_2:hover {
+        background-size: 100% 100%;
+        color: whitesmoke;
+        background: #0468d7;
+      }
+      .view_10_card_3:hover {
+        background-size: 100% 100%;
+        color: whitesmoke;
+        background: #0468d7;
+      }
+
+      .line {
+        width: 100%;
+        padding: 0.1rem;
+        background: #e8eaed;
+        border-radius: 50px;
+      }
+      .view_10_buttons {
+        @include flex(row, center, end);
+        gap: 0.5rem;
+        margin-top: 4rem;
+        .prev,
+        .next {
+          width: 2rem;
+        }
+      }
+    }
+  }
+  .view_11 {
+    width: 100%;
+    .view_11_inner {
+      font-family: A1;
+      color: var(--text--color2);
+      margin-top: 7rem;
+      padding: 2rem;
+      .view_11_texts {
+        @include flex(column, start, start);
+        h1 {
+          font-size: clamp(46px, 5vw, 60px);
+          line-height: 0.98;
+        }
+        .view_11_form {
+          h2 {
+            font-size: clamp(24px, 4vw, 28px);
+            margin-top: 2rem;
+            opacity: 80%;
+          }
+
+          .view_11_input {
+            width: 100%;
+            @include flex(row, center, start);
+            gap: 0.8rem;
+            background-color: #f1f3f4;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            margin-top: 3rem;
+            input {
+              width: 100%;
+              border: none;
+              outline: none;
+              background-color: transparent;
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+      .view_11_image {
+        position: relative;
+        background-color: #042449;
+        margin-top: 5rem;
+        color: #ffffff;
+        padding: 7rem 3rem;
+        border-radius: 20px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: right;
+        margin-bottom: 2rem;
+        .view_11_media {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 77;
+          .view_11_img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .view_11_text {
           position: relative;
-          bottom: -4px;
+          z-index: 88;
+          h1 {
+            font-size: clamp(46px, 6vw, 60px);
+            margin-bottom: 1.7rem;
+          }
+          p {
+            font-size: clamp(18px, 2vw, 20px);
+            margin-bottom: 1.7rem;
+          }
+          .view_11_buttons {
+            @include flex(column, start, start);
+            font-size: 1rem;
+            gap: 1rem;
+            .view_11_button_1 {
+              @include button_style(#0468d7);
+              background-color: #ffff;
+            }
+            .view_11_button_2 {
+              @include button_style(#ffff, none, 0);
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    width: 100%;
+    background-color: #f8f9fa;
+    font-family: A1;
+    .footer_inner {
+      padding: 3rem;
+      .services {
+        @include flex(column, start, start);
+        .logo {
+          width: 40%;
+          img {
+            width: 100%;
+          }
+        }
+        .footer_services_1 {
+          width: 100%;
+          @include flex(column, start, start);
+          .about_flutter {
+            padding: 2rem;
+            h4 {
+              font-size: 16px;
+              font-weight: 800;
+              margin-bottom: 0.5rem;
+            }
+            ul {
+              list-style: none;
+              font-size: 16px;
+              li {
+                margin-bottom: 0.5rem;
+                color: #4a4a4a;
+              }
+            }
+          }
+          .learn_flutter {
+            padding: 2rem;
+            h4 {
+              font-size: 16px;
+              font-weight: 800;
+              margin-bottom: 0.5rem;
+            }
+            ul {
+              list-style: none;
+              font-size: 16px;
+              li {
+                margin-bottom: 0.5rem;
+                color: #4a4a4a;
+              }
+            }
+          }
+          .multi_platform {
+            padding: 2rem;
+            h4 {
+              font-size: 16px;
+              font-weight: 800;
+              margin-bottom: 0.5rem;
+            }
+            ul {
+              list-style: none;
+              font-size: 16px;
+              li {
+                margin-bottom: 0.5rem;
+                color: #4a4a4a;
+              }
+            }
+          }
+        }
+      }
+      .footer_social {
+        @include flex();
+        gap: 1rem;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+      }
+      .copywright {
+        @include flex(column);
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        font-size: 1rem;
+        gap: 2rem;
+        color: #4a4a4a;
+        p {
+          text-align: center;
+        }
+        a {
+          text-decoration: none;
+          margin-right: 0.5rem;
+          color: #4a4a4a;
         }
       }
     }
@@ -827,15 +1095,18 @@ main {
               padding: 0.5rem 0.8rem;
               background: transparent;
               border-radius: 50px;
+              color: whitesmoke;
+              cursor: pointer;
             }
             li:hover {
-              background: rgba(245, 245, 245, 0.295);
+              background: rgba(245, 245, 245, 0.2);
             }
             img {
               width: 2rem;
               padding: 0.5rem;
               background: rgba(245, 245, 245, 0);
               border-radius: 50%;
+              cursor: pointer;
             }
             img:hover {
               background: rgba(245, 245, 245, 0.295);
@@ -849,6 +1120,7 @@ main {
               color: #2270d5;
               font-weight: 600;
               margin-left: 0.5rem;
+              cursor: pointer;
             }
           }
         }
@@ -988,7 +1260,6 @@ main {
         position: relative;
         .view_7_texts {
           width: 60%;
-
           button {
             margin-bottom: 0rem;
           }
@@ -1027,17 +1298,104 @@ main {
     .view_9 {
       max-width: 1300px;
       margin: auto;
+      margin-top: 7rem;
       .view_9_inner {
-        @include flex(row);
-        overflow: visible;
+        @include flex(row, center, start);
+        position: relative;
+        .view_9_texts {
+          width: 70%;
+          .view_9_buttons {
+            @include flex(row, center, start);
+            margin-top: 2rem;
+            .view_9_button_2 {
+              margin-top: 0rem;
+            }
+          }
+        }
         .view_9_image {
-          width: 80%;
-          position: relative;
+          width: 31.8%;
+          position: absolute;
+          bottom: -4px;
+          right: 0;
           img {
             width: 100%;
-            position: absolute;
-            bottom: -4px;
           }
+        }
+      }
+    }
+    .view_10 {
+      .view_10_inner {
+        .view_10_cards {
+          .view_10_card_1,
+          .view_10_card_2,
+          .view_10_card_3 {
+            width: 37%;
+          }
+        }
+      }
+    }
+    .view_11 {
+      .view_11_inner {
+        margin-top: 5rem;
+        .view_11_texts {
+          @include flex(row, start, space-between);
+          .view_11_form {
+            h2 {
+              margin-top: 0rem;
+            }
+            .view_11_input {
+              margin-top: 2rem;
+              input {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+        .view_11_image {
+          padding: 3.5rem 3rem;
+          .view_11_media {
+            width: 40%;
+          }
+          .view_11_text {
+            h1 {
+              margin-bottom: 0.7rem;
+            }
+            .view_11_buttons {
+              @include flex(row, center, start);
+            }
+          }
+        }
+      }
+    }
+    footer {
+      .footer_inner {
+        padding: 4rem;
+        .services {
+          @include flex(row, start, space-between);
+          width: 100%;
+          .logo {
+            width: 8%;
+          }
+          .footer_services_1 {
+            width: 70%;
+            @include flex(row, start, space-evenly);
+            .about_flutter {
+              padding: 0rem;
+            }
+            .learn_flutter {
+              padding: 0rem;
+            }
+            .multi_platform {
+              padding: 0rem;
+            }
+          }
+        }
+        .footer_social {
+          @include flex(row, start, start);
+        }
+        .copywright {
+          @include flex(row, start, space-between);
+          margin-bottom: 0rem;
         }
       }
     }

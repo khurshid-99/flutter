@@ -31,7 +31,9 @@ body {
 .view_4,
 .view_5,
 .view_6,
-.view_7 {
+.view_7,
+.view_10_inner,
+.view_11_inner {
   max-width: 1300px;
   margin: auto;
 }
@@ -44,14 +46,16 @@ body {
 main {
   width: 100%;
   height: 100%;
-  background: #000;
-  color: whitesmoke;
+  background: #ffffff;
+  color: #000;
 }
 main header {
   width: 100%;
   background: radial-gradient(ellipse at bottom, #1a68d3 5%, transparent 60%), linear-gradient(136deg, transparent, #71c7ee 290%), linear-gradient(115deg, #9d9af1, transparent 40%), linear-gradient(180deg, transparent 0, #1a68d3 70%), radial-gradient(ellipse at -70% -180%, transparent 80%, #71c7ee 0), radial-gradient(ellipse at bottom, #1a68d3 40%, transparent 80%), radial-gradient(ellipse at 5% 340%, transparent 80%, #bfc2f4 0);
 }
 main header nav {
+  width: 100%;
+  position: relative;
   padding: 1.5rem;
   width: 100%;
   display: flex;
@@ -273,6 +277,7 @@ main .view_2 .view_2_texts button {
   border: none;
   color: #0468d7;
   font-weight: 600;
+  cursor: pointer;
   margin-top: 2rem;
   border: 1px solid #0468d7;
   background: #ffffff;
@@ -322,6 +327,7 @@ main .view_3 .view_3_texts button {
   border: 1px solid #0468d7;
   color: #0468d7;
   font-weight: 600;
+  cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
   margin-top: 2rem;
@@ -371,6 +377,7 @@ main .view_4 .view_4_texts button {
   border: 1px solid #0468d7;
   color: #0468d7;
   font-weight: 600;
+  cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
   margin-top: 2rem;
@@ -420,6 +427,7 @@ main .view_5 .view_5_texts button {
   border: 1px solid #0468d7;
   color: #0468d7;
   font-weight: 600;
+  cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
   margin-top: 2rem;
@@ -469,6 +477,7 @@ main .view_6 .view_6_texts button {
   border: 1px solid #0468d7;
   color: #0468d7;
   font-weight: 600;
+  cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
   margin-top: 2rem;
@@ -512,6 +521,7 @@ main .view_7 .view_7_inner .view_7_texts button {
   border: none;
   color: #000;
   font-weight: 600;
+  cursor: pointer;
   background-color: transparent;
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -773,6 +783,7 @@ main .view_8 .view_8_inner .view_8_cards_4 .view_8_texts .view_8_buttons .view_8
   border: 1px solid #0468d7;
   color: #0468d7;
   font-weight: 600;
+  cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
   margin-top: 2rem;
@@ -789,6 +800,7 @@ main .view_8 .view_8_inner .view_8_cards_4 .view_8_texts .view_8_buttons .view_8
   border: none;
   color: #000;
   font-weight: 600;
+  cursor: pointer;
   background-color: transparent;
 }
 main .view_8 .view_8_inner .view_8_cards_6 {
@@ -905,15 +917,16 @@ main .view_8 .view_8_inner .view_8_cards_7 .view_8_cards_7_4 img {
 main .view_9 {
   width: 100%;
   padding: 2rem;
+  position: relative;
 }
 main .view_9 .view_9_inner {
   background-image: linear-gradient(90deg, rgb(156, 196, 245), rgb(184, 240, 247));
   border-radius: 40px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 main .view_9 .view_9_inner .view_9_texts {
   padding: 3rem;
@@ -942,6 +955,7 @@ main .view_9 .view_9_inner .view_9_texts .view_9_buttons .view_9_button_1 {
   border: 1px solid #000;
   color: #000000;
   font-weight: 600;
+  cursor: pointer;
   background-color: transparent;
 }
 main .view_9 .view_9_inner .view_9_texts .view_9_buttons .view_9_button_2 {
@@ -951,16 +965,325 @@ main .view_9 .view_9_inner .view_9_texts .view_9_buttons .view_9_button_2 {
   border: none;
   color: #000000;
   font-weight: 600;
+  cursor: pointer;
   background-color: transparent;
   margin-top: 0.7rem;
 }
 main .view_9 .view_9_inner .view_9_image {
   width: 100%;
+  position: relative;
+  bottom: -4px;
 }
 main .view_9 .view_9_inner .view_9_image img {
   width: 100%;
+}
+main .view_10 {
+  width: 100%;
+  padding: 6rem 2rem;
+  background-color: #f8f9fa;
+  color: var(--text--color2);
+  font-family: A1;
+  overflow: hidden;
+}
+main .view_10 .view_10_inner h1 {
+  font-size: clamp(46px, 6vw, 60px);
+  margin-bottom: 5rem;
+}
+main .view_10 .view_10_inner .view_10_cards {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+main .view_10 .view_10_inner .view_10_cards .view_10_card_1,
+main .view_10 .view_10_inner .view_10_cards .view_10_card_2,
+main .view_10 .view_10_inner .view_10_cards .view_10_card_3 {
+  width: 100%;
+  height: clamp(435px, 50vw, 520px);
+  margin: auto;
+  margin-bottom: 1.7rem;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s ease;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 3rem;
+  flex-shrink: 0;
+}
+main .view_10 .view_10_inner .view_10_cards .view_10_card_1 img,
+main .view_10 .view_10_inner .view_10_cards .view_10_card_2 img,
+main .view_10 .view_10_inner .view_10_cards .view_10_card_3 img {
+  width: 100%;
+}
+main .view_10 .view_10_inner .view_10_cards .view_10_card_1 h1,
+main .view_10 .view_10_inner .view_10_cards .view_10_card_2 h1,
+main .view_10 .view_10_inner .view_10_cards .view_10_card_3 h1 {
+  font-size: clamp(24px, 3vw, 28px);
+  margin-top: 1rem;
+}
+main .view_10 .view_10_inner .view_10_cards .view_10_card_1 button,
+main .view_10 .view_10_inner .view_10_cards .view_10_card_2 button,
+main .view_10 .view_10_inner .view_10_cards .view_10_card_3 button {
+  font-family: A1;
+  padding: 0;
+  border-radius: 50px;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+main .view_10 .view_10_inner .view_10_card_1:hover {
+  background-size: 100% 100%;
+  color: whitesmoke;
+  background: #0468d7;
+}
+main .view_10 .view_10_inner .view_10_card_2:hover {
+  background-size: 100% 100%;
+  color: whitesmoke;
+  background: #0468d7;
+}
+main .view_10 .view_10_inner .view_10_card_3:hover {
+  background-size: 100% 100%;
+  color: whitesmoke;
+  background: #0468d7;
+}
+main .view_10 .view_10_inner .line {
+  width: 100%;
+  padding: 0.1rem;
+  background: #e8eaed;
+  border-radius: 50px;
+}
+main .view_10 .view_10_inner .view_10_buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem;
+  margin-top: 4rem;
+}
+main .view_10 .view_10_inner .view_10_buttons .prev,
+main .view_10 .view_10_inner .view_10_buttons .next {
+  width: 2rem;
+}
+main .view_11 {
+  width: 100%;
+}
+main .view_11 .view_11_inner {
+  font-family: A1;
+  color: var(--text--color2);
+  margin-top: 7rem;
+  padding: 2rem;
+}
+main .view_11 .view_11_inner .view_11_texts {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+main .view_11 .view_11_inner .view_11_texts h1 {
+  font-size: clamp(46px, 5vw, 60px);
+  line-height: 0.98;
+}
+main .view_11 .view_11_inner .view_11_texts .view_11_form h2 {
+  font-size: clamp(24px, 4vw, 28px);
+  margin-top: 2rem;
+  opacity: 80%;
+}
+main .view_11 .view_11_inner .view_11_texts .view_11_form .view_11_input {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0.8rem;
+  background-color: #f1f3f4;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+}
+main .view_11 .view_11_inner .view_11_texts .view_11_form .view_11_input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+}
+main .view_11 .view_11_inner .view_11_image {
   position: relative;
-  bottom: -4px;
+  background-color: #042449;
+  margin-top: 5rem;
+  color: #ffffff;
+  padding: 7rem 3rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: right;
+  margin-bottom: 2rem;
+}
+main .view_11 .view_11_inner .view_11_image .view_11_media {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 77;
+}
+main .view_11 .view_11_inner .view_11_image .view_11_media .view_11_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+main .view_11 .view_11_inner .view_11_image .view_11_text {
+  position: relative;
+  z-index: 88;
+}
+main .view_11 .view_11_inner .view_11_image .view_11_text h1 {
+  font-size: clamp(46px, 6vw, 60px);
+  margin-bottom: 1.7rem;
+}
+main .view_11 .view_11_inner .view_11_image .view_11_text p {
+  font-size: clamp(18px, 2vw, 20px);
+  margin-bottom: 1.7rem;
+}
+main .view_11 .view_11_inner .view_11_image .view_11_text .view_11_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  font-size: 1rem;
+  gap: 1rem;
+}
+main .view_11 .view_11_inner .view_11_image .view_11_text .view_11_buttons .view_11_button_1 {
+  font-family: A1;
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  border: none;
+  color: #0468d7;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: white;
+}
+main .view_11 .view_11_inner .view_11_image .view_11_text .view_11_buttons .view_11_button_2 {
+  font-family: A1;
+  padding: 0;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+}
+main footer {
+  width: 100%;
+  background-color: #f8f9fa;
+  font-family: A1;
+}
+main footer .footer_inner {
+  padding: 3rem;
+}
+main footer .footer_inner .services {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+main footer .footer_inner .services .logo {
+  width: 40%;
+}
+main footer .footer_inner .services .logo img {
+  width: 100%;
+}
+main footer .footer_inner .services .footer_services_1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+main footer .footer_inner .services .footer_services_1 .about_flutter {
+  padding: 2rem;
+}
+main footer .footer_inner .services .footer_services_1 .about_flutter h4 {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+main footer .footer_inner .services .footer_services_1 .about_flutter ul {
+  list-style: none;
+  font-size: 16px;
+}
+main footer .footer_inner .services .footer_services_1 .about_flutter ul li {
+  margin-bottom: 0.5rem;
+  color: #4a4a4a;
+}
+main footer .footer_inner .services .footer_services_1 .learn_flutter {
+  padding: 2rem;
+}
+main footer .footer_inner .services .footer_services_1 .learn_flutter h4 {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+main footer .footer_inner .services .footer_services_1 .learn_flutter ul {
+  list-style: none;
+  font-size: 16px;
+}
+main footer .footer_inner .services .footer_services_1 .learn_flutter ul li {
+  margin-bottom: 0.5rem;
+  color: #4a4a4a;
+}
+main footer .footer_inner .services .footer_services_1 .multi_platform {
+  padding: 2rem;
+}
+main footer .footer_inner .services .footer_services_1 .multi_platform h4 {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+main footer .footer_inner .services .footer_services_1 .multi_platform ul {
+  list-style: none;
+  font-size: 16px;
+}
+main footer .footer_inner .services .footer_services_1 .multi_platform ul li {
+  margin-bottom: 0.5rem;
+  color: #4a4a4a;
+}
+main footer .footer_inner .footer_social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+main footer .footer_inner .copywright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  gap: 2rem;
+  color: #4a4a4a;
+}
+main footer .footer_inner .copywright p {
+  text-align: center;
+}
+main footer .footer_inner .copywright a {
+  text-decoration: none;
+  margin-right: 0.5rem;
+  color: #4a4a4a;
 }
 
 @media (min-width: 1024px) {
@@ -995,15 +1318,18 @@ main .view_9 .view_9_inner .view_9_image img {
     padding: 0.5rem 0.8rem;
     background: transparent;
     border-radius: 50px;
+    color: whitesmoke;
+    cursor: pointer;
   }
   main header nav .nav_items ul li:hover {
-    background: rgba(245, 245, 245, 0.295);
+    background: rgba(245, 245, 245, 0.2);
   }
   main header nav .nav_items ul img {
     width: 2rem;
     padding: 0.5rem;
     background: rgba(245, 245, 245, 0);
     border-radius: 50%;
+    cursor: pointer;
   }
   main header nav .nav_items ul img:hover {
     background: rgba(245, 245, 245, 0.295);
@@ -1017,6 +1343,7 @@ main .view_9 .view_9_inner .view_9_image img {
     color: #2270d5;
     font-weight: 600;
     margin-left: 0.5rem;
+    cursor: pointer;
   }
   main header .text {
     width: 890px;
@@ -1187,21 +1514,115 @@ main .view_9 .view_9_inner .view_9_image img {
   main .view_9 {
     max-width: 1300px;
     margin: auto;
+    margin-top: 7rem;
   }
   main .view_9 .view_9_inner {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    overflow: visible;
+    justify-content: start;
+    position: relative;
+  }
+  main .view_9 .view_9_inner .view_9_texts {
+    width: 70%;
+  }
+  main .view_9 .view_9_inner .view_9_texts .view_9_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-top: 2rem;
+  }
+  main .view_9 .view_9_inner .view_9_texts .view_9_buttons .view_9_button_2 {
+    margin-top: 0rem;
   }
   main .view_9 .view_9_inner .view_9_image {
-    width: 80%;
-    position: relative;
+    width: 31.8%;
+    position: absolute;
+    bottom: -4px;
+    right: 0;
   }
   main .view_9 .view_9_inner .view_9_image img {
     width: 100%;
-    position: absolute;
-    bottom: -4px;
+  }
+  main .view_10 .view_10_inner .view_10_cards .view_10_card_1,
+  main .view_10 .view_10_inner .view_10_cards .view_10_card_2,
+  main .view_10 .view_10_inner .view_10_cards .view_10_card_3 {
+    width: 37%;
+  }
+  main .view_11 .view_11_inner {
+    margin-top: 5rem;
+  }
+  main .view_11 .view_11_inner .view_11_texts {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+  main .view_11 .view_11_inner .view_11_texts .view_11_form h2 {
+    margin-top: 0rem;
+  }
+  main .view_11 .view_11_inner .view_11_texts .view_11_form .view_11_input {
+    margin-top: 2rem;
+  }
+  main .view_11 .view_11_inner .view_11_texts .view_11_form .view_11_input input {
+    font-size: 1rem;
+  }
+  main .view_11 .view_11_inner .view_11_image {
+    padding: 3.5rem 3rem;
+  }
+  main .view_11 .view_11_inner .view_11_image .view_11_media {
+    width: 40%;
+  }
+  main .view_11 .view_11_inner .view_11_image .view_11_text h1 {
+    margin-bottom: 0.7rem;
+  }
+  main .view_11 .view_11_inner .view_11_image .view_11_text .view_11_buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+  main footer .footer_inner {
+    padding: 4rem;
+  }
+  main footer .footer_inner .services {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+  }
+  main footer .footer_inner .services .logo {
+    width: 8%;
+  }
+  main footer .footer_inner .services .footer_services_1 {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-evenly;
+  }
+  main footer .footer_inner .services .footer_services_1 .about_flutter {
+    padding: 0rem;
+  }
+  main footer .footer_inner .services .footer_services_1 .learn_flutter {
+    padding: 0rem;
+  }
+  main footer .footer_inner .services .footer_services_1 .multi_platform {
+    padding: 0rem;
+  }
+  main footer .footer_inner .footer_social {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+  }
+  main footer .footer_inner .copywright {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 0rem;
   }
 }/*# sourceMappingURL=style.css.map */
